@@ -88,7 +88,7 @@ def load_data():
     try:
         # Replace with your actual data source
         df = pd.read_csv("cleaned_data.csv")
-
+        df = df.head(500)
         # Data cleaning
         df = df.dropna(subset=["Name", "Icon URL"])
         df["Average User Rating"] = pd.to_numeric(df["Average User Rating"], errors="coerce").fillna(0)
