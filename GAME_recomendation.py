@@ -1,12 +1,16 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import os
+os.system("pip install scikit-learn")
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from PIL import Image
 import requests
 from io import BytesIO
 import random
+
+
 
 # Configure the app (EXACTLY AS PROVIDED)
 st.set_page_config(
